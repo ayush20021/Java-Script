@@ -1,12 +1,14 @@
-let a = 10;
+let a = 10;  // Global variable
 console.log(a);
 
+// Named function
 function meth1(){
-    let b = 20;
+    let b = 20;  //Local variable
     console.log(b);
 }
 meth1();
 
+// Arrow functions
 const meth2 = () => {
     let c = 30;
     console.log(c);
