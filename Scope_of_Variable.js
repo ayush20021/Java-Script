@@ -12,3 +12,11 @@ const meth2 = () => {
     console.log(c);
 };
 meth2();
+
+// Anonymous Functions
+
+const meth3 = function(){
+    let d = 40;
+    console.log(d);
+};
+meth3();
