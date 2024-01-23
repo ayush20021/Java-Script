@@ -16,6 +16,12 @@ class Employee{
         this.Name = Name;
         this.Age = Age;
     }
+
+
+    greetEmp(){                                      // Method in java 
+
+        console.log(`Welcome ${this.Name}`);
+    }
 }
 
 const Employee1 = new Employee("Ayush", 21);
@@ -28,3 +34,6 @@ console.log(Employee1.Name);
 const  c= Object.values(Employee1);
 
 console.log(c);
+
+Employee1.greetEmp()
+
