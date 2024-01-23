@@ -36,4 +36,3 @@ const  c= Object.values(Employee1);
 console.log(c);
 
 Employee1.greetEmp()
-
