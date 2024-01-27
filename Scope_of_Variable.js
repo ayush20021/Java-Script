@@ -2,6 +2,7 @@ let a = 10;  // Global variable
 console.log(a);
 
 // Named function
+
 function meth1(){
     let b = 20;  //Local variable
     console.log(b);
@@ -9,6 +10,7 @@ function meth1(){
 meth1();
 
 // Arrow functions
+
 const meth2 = () => {
     let c = 30;
     console.log(c);
