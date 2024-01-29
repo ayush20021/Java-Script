@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <!-- Include any necessary stylesheets or libraries -->
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DEP</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+        const tbody = document.getElementById("tbody");
+
+// Retrieve data from localStorage
+    const storedData = localStorage.getItem("1");
+
+// Parse the JSON string into an array of objects
+    const empDataArray = JSON.parse(storedData);
+
+// Iterate over each object in the array and create table rows
+    empDataArray.forEach((empdata) => {
+    const row = document.createElement("tr");
+
+    const name = document.createElement("td");
+    name.textContent = empdata.name;
+
+    const gender = document.createElement("td");
+    gender.textContent = empdata.gender;
+
+    const dep = document.createElement("td");
+    dep.textContent = empdata.dep;
+
+    row.appendChild(name);
+    row.appendChild(gender);
+    row.appendChild(dep);
+
+    tbody.appendChild(row);
+});
+    </script>
+</body>
+</html>
