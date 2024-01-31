@@ -24,29 +24,35 @@ a1.push(E4)
 
 
 
-const l1 = Object.keys(localStorage);
-        const tbody = document.getElementById("tbody");
+const tbody = document.getElementById("tbody");
 
-        l1.forEach((data) => {
-            let empdata = JSON.parse(localStorage.getItem(data));
+// Retrieve data from localStorage
+    const storedData = localStorage.getItem("1");
 
-            const row = document.createElement("tr");
+// Parse the JSON string into an array of objects
+    const empDataArray = JSON.parse(storedData);
 
-            const name = document.createElement("td");
-            name.textContent = empdata.name;
-            
-            const gender = document.createElement("td");
-            gender.textContent = empdata.gender;
 
-            const dep = document.createElement("td");
-            dep.textContent = empdata.dep;
+    
+// Iterate over each object in the array and create table rows
+    empDataArray.forEach((empdata) => {
+    const row = document.createElement("tr");
 
-            row.appendChild(name);
-            row.appendChild(gender);
-            row.appendChild(dep);
+    const name = document.createElement("td");
+    name.textContent = empdata.name;
 
-            tbody.appendChild(row);
-        });
+    const gender = document.createElement("td");
+    gender.textContent = empdata.gender;
+
+    const dep = document.createElement("td");
+    dep.textContent = empdata.dep;
+
+    row.appendChild(name);
+    row.appendChild(gender);
+    row.appendChild(dep);
+
+    tbody.appendChild(row);
+});
 
 
 
